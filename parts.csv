@@ -1,0 +1,4 @@
+name,length,width,thickness,num_holes,hole_radius,margin
+bracket_A,200,100,10,4,4.5,20
+bracket_B,300,150,12,6,4.5,25
+bracket_C,150,80,8,3,4.5,15

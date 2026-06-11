@@ -33,7 +33,7 @@ Each plate has the correct hole count and even spacing straight from its spreads
 
 Before writing any code, I worked out the hole-spacing geometry by hand:
 
-![Hole pattern design sheet showing the plate, coordinate frame, and spacing formulas](docs/sketch.svg)
+![Hole pattern design sheet showing the plate, coordinate frame, and spacing formulas](docs/sketch.jpg)
 
 The key insight is the "fence-post" relationship: **N holes create N − 1 gaps between them** (four posts, three sections of fence). Getting this wrong is the classic off-by-one that pushes holes toward one end.
 

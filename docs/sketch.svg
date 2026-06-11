@@ -1,79 +1,97 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1400" viewBox="0 0 1200 1400">
-  <rect width="1200" height="1400" fill="#f8f4e8"/>
-  <style>
-    .title{font:700 58px system-ui, -apple-system, Segoe UI, sans-serif; fill:#23242f; letter-spacing:1px}
-    .blue{font:32px system-ui, -apple-system, Segoe UI, sans-serif; fill:#173d82}
-    .small{font:22px system-ui, -apple-system, Segoe UI, sans-serif; fill:#555}
-    .label{font:26px system-ui, -apple-system, Segoe UI, sans-serif; fill:#173d82}
-    .red{font:26px system-ui, -apple-system, Segoe UI, sans-serif; fill:#b7332a}
-    .formula{font:700 64px system-ui, -apple-system, Segoe UI, sans-serif; fill:#23242f}
-    .line{stroke:#252733; stroke-width:3; fill:none; stroke-linecap:round; stroke-linejoin:round}
-    .thin{stroke:#173d82; stroke-width:2; fill:none; stroke-linecap:round; stroke-dasharray:8 8}
-    .dim{stroke:#b7332a; stroke-width:4; fill:none; marker-start:url(#arrowR); marker-end:url(#arrowR)}
-    .dimB{stroke:#173d82; stroke-width:4; fill:none; marker-start:url(#arrowB); marker-end:url(#arrowB)}
-  </style>
+<svg xmlns="http://www.w3.org/2000/svg" width="1240" height="1481" viewBox="0 0 1240 1481">
+  <rect width="1240" height="1481" fill="#f7f3e9"/>
   <defs>
-    <marker id="arrowR" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto-start-reverse"><path d="M0,0 L8,4 L0,8 Z" fill="#b7332a"/></marker>
-    <marker id="arrowB" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto-start-reverse"><path d="M0,0 L8,4 L0,8 Z" fill="#173d82"/></marker>
+    <marker id="arrowBlue" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#27407a"/></marker>
+    <marker id="arrowRed" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#b23a2e"/></marker>
+    <marker id="arrowInk" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#2b2b33"/></marker>
   </defs>
 
-  <text x="75" y="95" class="title">Equally-Spaced Hole Pattern</text>
-  <text x="75" y="140" class="blue">drill 4 holes evenly along the plate → find the spacing</text>
-  <path d="M75 175 L1050 175" class="line"/>
-  <text x="1015" y="95" class="small">No. HP-04</text>
-  <text x="1015" y="125" class="small">10 / 06 / '26</text>
+  <!-- title -->
+  <text x="78" y="100" font-family="Arial, sans-serif" font-size="58" font-weight="700" fill="#2b2b33">Equally-Spaced Hole Pattern</text>
+  <text x="78" y="145" font-family="Arial, sans-serif" font-size="30" fill="#27407a">drill 4 holes evenly along the plate → find the spacing</text>
+  <text x="1042" y="95" font-family="Arial, sans-serif" font-size="30" fill="#2b2b33">No. HP-04</text>
+  <text x="1042" y="128" font-family="Arial, sans-serif" font-size="22" fill="#777">10 / 06 / '26</text>
+  <path d="M80 177 C300 165, 820 185, 1085 174" fill="none" stroke="#2b2b33" stroke-width="3"/>
 
-  <text x="75" y="245" class="blue">the workpiece →</text>
-  <path d="M135 355 L505 355 L600 275 L270 275 Z" fill="#fbfaf4" stroke="#252733" stroke-width="4"/>
-  <path d="M135 355 L135 462 L505 462 L505 355 Z" fill="#efeadf" stroke="#252733" stroke-width="4"/>
-  <path d="M505 355 L600 275 L600 385 L505 462 Z" fill="#f4efe5" stroke="#252733" stroke-width="4"/>
-  <ellipse cx="230" cy="330" rx="18" ry="9" fill="none" stroke="#173d82" stroke-width="4"/>
-  <ellipse cx="320" cy="330" rx="18" ry="9" fill="none" stroke="#173d82" stroke-width="4"/>
-  <ellipse cx="410" cy="330" rx="18" ry="9" fill="none" stroke="#173d82" stroke-width="4"/>
-  <ellipse cx="500" cy="330" rx="18" ry="9" fill="none" stroke="#173d82" stroke-width="4"/>
-  <text x="105" y="515" class="small">rough block, holes go through the top face</text>
-
-  <text x="740" y="245" class="blue">axes</text>
-  <path d="M850 350 L970 350" stroke="#173d82" stroke-width="4" marker-end="url(#arrowB)"/>
-  <path d="M850 350 L850 250" stroke="#173d82" stroke-width="4" marker-end="url(#arrowB)"/>
-  <path d="M850 350 L780 420" stroke="#173d82" stroke-width="4" marker-end="url(#arrowB)"/>
-  <text x="980" y="360" class="small">x</text><text x="840" y="238" class="small">y</text><text x="760" y="440" class="small">z</text>
-
-  <text x="740" y="505" class="blue">what we know</text>
-  <text x="740" y="555" class="label">L</text><text x="795" y="555" class="small">total length of plate</text>
-  <line x1="735" y1="575" x2="1115" y2="575" stroke="#ddd"/>
-  <text x="740" y="620" class="label">m</text><text x="795" y="620" class="small">edge margin, both ends</text>
-  <line x1="735" y1="640" x2="1115" y2="640" stroke="#ddd"/>
-  <text x="740" y="685" class="label">Lu</text><text x="795" y="685" class="small">usable length between 1st and last hole</text>
-  <line x1="735" y1="705" x2="1115" y2="705" stroke="#ddd"/>
-  <text x="740" y="750" class="label">s</text><text x="795" y="750" class="small">spacing between holes</text>
-  <line x1="735" y1="770" x2="1115" y2="770" stroke="#ddd"/>
-  <text x="740" y="815" class="label">n</text><text x="795" y="815" class="small">number of holes = 4</text>
-
-  <text x="75" y="585" class="blue">plan view — set out the holes</text>
-  <rect x="85" y="650" width="560" height="90" fill="#fbfaf4" stroke="#252733" stroke-width="4"/>
-  <line x1="70" y1="695" x2="660" y2="695" class="thin"/>
-  <g fill="#fbfaf4" stroke="#173d82" stroke-width="4">
-    <circle cx="155" cy="695" r="22"/><circle cx="288" cy="695" r="22"/><circle cx="421" cy="695" r="22"/><circle cx="554" cy="695" r="22"/>
+  <!-- workpiece -->
+  <text x="78" y="248" font-family="Arial, sans-serif" font-size="31" fill="#27407a">the workpiece →</text>
+  <path d="M145 360 L505 360 L630 285 L270 285 Z" fill="#fffdf7" stroke="#2b2b33" stroke-width="4"/>
+  <path d="M145 360 L145 465 L505 465 L505 360 Z" fill="#f1eadc" stroke="#2b2b33" stroke-width="4"/>
+  <path d="M505 360 L630 285 L630 392 L505 465 Z" fill="#f7f0e4" stroke="#2b2b33" stroke-width="4"/>
+  <g fill="none" stroke="#27407a" stroke-width="4">
+    <ellipse cx="235" cy="335" rx="19" ry="9"/>
+    <ellipse cx="325" cy="335" rx="19" ry="9"/>
+    <ellipse cx="415" cy="335" rx="19" ry="9"/>
+    <ellipse cx="505" cy="335" rx="19" ry="9"/>
   </g>
-  <text x="147" y="704" class="small">1</text><text x="280" y="704" class="small">2</text><text x="413" y="704" class="small">3</text><text x="546" y="704" class="small">4</text>
-  <line x1="155" y1="620" x2="155" y2="805" class="thin"/><line x1="288" y1="620" x2="288" y2="805" class="thin"/><line x1="421" y1="620" x2="421" y2="805" class="thin"/><line x1="554" y1="620" x2="554" y2="805" class="thin"/>
-  <path d="M85 825 L645 825" class="dimB"/><text x="325" y="858" class="label">L (total length)</text>
-  <path d="M155 785 L554 785" class="dimB"/><text x="320" y="780" class="label">Lu (usable)</text>
-  <path d="M85 755 L155 755" class="dimB"/><text x="115" y="780" class="label">m</text>
-  <path d="M554 755 L645 755" class="dimB"/><text x="595" y="780" class="label">m</text>
-  <path d="M155 750 L288 750" class="dim"/><path d="M288 750 L421 750" class="dim"/><path d="M421 750 L554 750" class="dim"/>
-  <text x="215" y="738" class="red">s</text><text x="348" y="738" class="red">s</text><text x="481" y="738" class="red">s</text>
+  <text x="108" y="532" font-family="Arial, sans-serif" font-size="25" fill="#6a6760">rough block, holes go through the top face</text>
 
-  <rect x="80" y="1010" width="450" height="150" fill="#fffdf6" stroke="#b7332a" stroke-width="4"/>
-  <text x="105" y="1060" class="red">step 1 — usable length</text>
-  <text x="105" y="1132" class="formula">Lu = L − 2m</text>
-  <text x="105" y="1178" class="small">take off the margin at each end.</text>
+  <!-- axes -->
+  <text x="742" y="248" font-family="Arial, sans-serif" font-size="31" fill="#27407a">axes</text>
+  <path d="M855 365 L985 365" stroke="#27407a" stroke-width="4" marker-end="url(#arrowBlue)"/>
+  <path d="M855 365 L855 250" stroke="#27407a" stroke-width="4" marker-end="url(#arrowBlue)"/>
+  <path d="M855 365 L770 445" stroke="#27407a" stroke-width="4" marker-end="url(#arrowBlue)"/>
+  <text x="999" y="377" font-family="Arial, sans-serif" font-size="29" fill="#2b2b33">x</text>
+  <text x="844" y="238" font-family="Arial, sans-serif" font-size="29" fill="#2b2b33">y</text>
+  <text x="750" y="466" font-family="Arial, sans-serif" font-size="29" fill="#2b2b33">z</text>
 
-  <rect x="620" y="1010" width="485" height="150" fill="#fffdf6" stroke="#b7332a" stroke-width="4"/>
-  <text x="650" y="1060" class="red">step 2 — spacing</text>
-  <text x="650" y="1132" class="formula">s = Lu ÷ (n−1)</text>
-  <text x="650" y="1178" class="small">4 holes leave 3 equal gaps, so divide by 3.</text>
+  <!-- given list -->
+  <text x="742" y="505" font-family="Arial, sans-serif" font-size="31" fill="#27407a">what we know</text>
+  <g font-family="Arial, sans-serif" font-size="24" fill="#2b2b33">
+    <text x="742" y="555" font-size="33" font-weight="700" fill="#27407a">L</text><text x="800" y="555">total length of plate</text>
+    <line x1="742" y1="576" x2="1138" y2="576" stroke="#d4cfbf" stroke-dasharray="4 5"/>
+    <text x="742" y="622" font-size="33" font-weight="700" fill="#27407a">m</text><text x="800" y="622">edge margin, both ends</text>
+    <line x1="742" y1="643" x2="1138" y2="643" stroke="#d4cfbf" stroke-dasharray="4 5"/>
+    <text x="742" y="689" font-size="33" font-weight="700" fill="#27407a">Lu</text><text x="800" y="689">usable length between 1st and last hole</text>
+    <line x1="742" y1="710" x2="1138" y2="710" stroke="#d4cfbf" stroke-dasharray="4 5"/>
+    <text x="742" y="756" font-size="33" font-weight="700" fill="#27407a">s</text><text x="800" y="756">spacing between holes</text>
+    <line x1="742" y1="777" x2="1138" y2="777" stroke="#d4cfbf" stroke-dasharray="4 5"/>
+    <text x="742" y="823" font-size="33" font-weight="700" fill="#27407a">n</text><text x="800" y="823">number of holes = 4</text>
+  </g>
 
-  <text x="80" y="1265" class="blue">✦ remember: n holes → (n−1) gaps, not n !</text>
+  <!-- plan view -->
+  <text x="78" y="610" font-family="Arial, sans-serif" font-size="31" fill="#27407a">plan view — set out the holes</text>
+  <rect x="86" y="660" width="585" height="96" fill="#fffdf7" stroke="#2b2b33" stroke-width="4"/>
+  <line x1="65" y1="708" x2="692" y2="708" stroke="#27407a" stroke-width="2" stroke-dasharray="16 8 4 8"/>
+  <g stroke="#27407a" stroke-width="3" stroke-dasharray="9 8">
+    <line x1="165" y1="625" x2="165" y2="855"/>
+    <line x1="300" y1="625" x2="300" y2="855"/>
+    <line x1="435" y1="625" x2="435" y2="855"/>
+    <line x1="570" y1="625" x2="570" y2="855"/>
+  </g>
+  <g fill="#fffdf7" stroke="#27407a" stroke-width="4">
+    <circle cx="165" cy="708" r="24"/><circle cx="300" cy="708" r="24"/><circle cx="435" cy="708" r="24"/><circle cx="570" cy="708" r="24"/>
+  </g>
+  <g font-family="Arial, sans-serif" font-size="25" fill="#2b2b33" text-anchor="middle">
+    <text x="165" y="717">1</text><text x="300" y="717">2</text><text x="435" y="717">3</text><text x="570" y="717">4</text>
+  </g>
+  <g stroke="#999" stroke-width="1.5" stroke-dasharray="5 6">
+    <line x1="86" y1="758" x2="86" y2="875"/><line x1="671" y1="758" x2="671" y2="875"/>
+    <line x1="165" y1="735" x2="165" y2="842"/><line x1="300" y1="735" x2="300" y2="842"/><line x1="435" y1="735" x2="435" y2="842"/><line x1="570" y1="735" x2="570" y2="842"/>
+  </g>
+  <path d="M86 795 L165 795" stroke="#27407a" stroke-width="4" marker-start="url(#arrowBlue)" marker-end="url(#arrowBlue)"/>
+  <path d="M570 795 L671 795" stroke="#27407a" stroke-width="4" marker-start="url(#arrowBlue)" marker-end="url(#arrowBlue)"/>
+  <path d="M165 785 L300 785" stroke="#b23a2e" stroke-width="4" marker-start="url(#arrowRed)" marker-end="url(#arrowRed)"/>
+  <path d="M300 785 L435 785" stroke="#b23a2e" stroke-width="4" marker-start="url(#arrowRed)" marker-end="url(#arrowRed)"/>
+  <path d="M435 785 L570 785" stroke="#b23a2e" stroke-width="4" marker-start="url(#arrowRed)" marker-end="url(#arrowRed)"/>
+  <path d="M165 835 L570 835" stroke="#27407a" stroke-width="4" marker-start="url(#arrowBlue)" marker-end="url(#arrowBlue)"/>
+  <path d="M86 882 L671 882" stroke="#2b2b33" stroke-width="4" marker-start="url(#arrowInk)" marker-end="url(#arrowInk)"/>
+  <g font-family="Arial, sans-serif" font-size="25" font-weight="700" text-anchor="middle">
+    <text x="126" y="786" fill="#27407a">m</text><text x="620" y="786" fill="#27407a">m</text>
+    <text x="232" y="776" fill="#b23a2e">s</text><text x="368" y="776" fill="#b23a2e">s</text><text x="503" y="776" fill="#b23a2e">s</text>
+    <text x="368" y="825" fill="#27407a">Lu (usable)</text><text x="378" y="873" fill="#2b2b33">L (total length)</text>
+  </g>
+
+  <!-- formula cards -->
+  <rect x="80" y="1028" width="455" height="155" rx="2" fill="#fffdf7" stroke="#b23a2e" stroke-width="4"/>
+  <text x="108" y="1080" font-family="Arial, sans-serif" font-size="27" fill="#b23a2e">step 1 — usable length</text>
+  <text x="108" y="1144" font-family="Arial, sans-serif" font-size="54" font-weight="700" fill="#2b2b33">Lu = L − 2m</text>
+  <text x="108" y="1184" font-family="Arial, sans-serif" font-size="22" fill="#555">take off the margin at each end.</text>
+
+  <rect x="620" y="1028" width="525" height="155" rx="2" fill="#fffdf7" stroke="#b23a2e" stroke-width="4"/>
+  <text x="650" y="1080" font-family="Arial, sans-serif" font-size="27" fill="#b23a2e">step 2 — spacing</text>
+  <text x="650" y="1144" font-family="Arial, sans-serif" font-size="54" font-weight="700" fill="#2b2b33">s = Lu ÷ (n−1)</text>
+  <text x="650" y="1184" font-family="Arial, sans-serif" font-size="22" fill="#555">4 holes leave 3 equal gaps, so divide by 3.</text>
+
+  <text x="80" y="1285" font-family="Arial, sans-serif" font-size="31" fill="#27407a">✦ remember: n holes → (n−1) gaps, not n !</text>
 </svg>
